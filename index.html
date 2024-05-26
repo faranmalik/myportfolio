@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faran-Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(27, 27, 81);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(134, 134, 242);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(134, 134, 242);
+            height: 1px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 0;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection .btn {
+            padding: 12px 20px;
+            background-color: rgb(82, 82, 195);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background-color 0.3s;
+        }
+
+        .leftSection .btn:hover {
+            background-color: rgb(134, 134, 242);
+        }
+
+        .rightSection img {
+            width: 105%;
+        }
+
+        .purple {
+            color: rgb(170, 112, 225);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 112, 225);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.8rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 75vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical-line {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 140px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 12px;
+        }
+
+        .educationSection {
+            padding: 40px 20px;
+            max-width: 80vw;
+            margin: auto;
+            color: white;
+            text-align: center;
+        }
+
+        .educationSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .educationSection ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .educationSection ul li {
+            background: rgb(27, 27, 81);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .educationSection ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .educationSection ul li h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: rgb(170, 112, 225);
+        }
+
+        .educationSection ul li p {
+            color: gray;
+            font-size: 1.2rem;
+        }
+
+        .educationSection ul li span {
+            color: rgb(134, 134, 242);
+            font-weight: bold;
+        }
+
+
+        .skillsSection,
+        .projectsSection,
+        .contactSection,
+        .educationSection {
+            background-color: rgb(27, 27, 81);
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 80vw;
+            margin: 40px auto;
+        }
+
+        .skillsSection h1,
+        .projectsSection h1,
+        .contactSection h1,
+        .educationSection h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .skillsSection ul,
+        .projectsSection ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skillsSection ul li,
+        .projectsSection ul li {
+            margin: 10px 0;
+        }
+
+        .projectsSection {
+            padding: 40px 20px;
+            max-width: 80vw;
+            margin: auto;
+            color: white;
+            text-align: center;
+        }
+
+        .projectsSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .projectsSection ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .projectsSection ul li {
+            background: rgb(27, 27, 81);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .projectsSection ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .projectsSection ul li h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: rgb(170, 112, 225);
+        }
+
+        .projectsSection ul li p {
+            color: gray;
+            font-size: 1.2rem;
+        }
+
+        .projectsSection ul li span {
+            color: rgb(134, 134, 242);
+            font-weight: bold;
+        }
+
+
+        .contactSection form div {
+            margin-bottom: 15px;
+        }
+
+        .contactSection label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contactSection input,
+        .contactSection textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contactSection textarea {
+            resize: vertical;
+        }
+
+        .contactSection button {
+            padding: 12px 20px;
+            background-color: rgb(82, 82, 195);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contactSection button:hover {
+            background-color: rgb(134, 134, 242);
+        }
+
+        footer {
+            background-color: rgb(27, 27, 81);
+        }
+
+        .footerBox {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footerBox ul {
+            list-style: none;
+        }
+
+        .footerBox div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+    </style>
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Faran's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hello, My name is <span class="purple">Muhammad Faran</span>
+                <div>
+                    and I am a
+                </div>
+
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn" onclick="alert('Request for Download Pending!')">Download Resume</button>
+                    <button onclick="window.location.href='https://www.youtube.com/channel/UCAwkJcrb7rteGLgeFGlE3ng'" class="btn">Visit Youtube</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bgg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="experience" class="secondSection">
+            <span class="text-gray">What have I done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical-line">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2021-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolor ut iste iusto nobis nostrum,
+                        aspernatur corporis impedit fugiat non quaerat, voluptate fugit nam sint atque molestias beatae
+                        obcaecati quibusdam.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img class="image-top" src="youtube1.png" alt="">
+                    <div class="vertical-title">
+                        Gaming Youtuber (2018-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolor ut iste iusto nobis nostrum,
+                        aspernatur corporis impedit fugiat non quaerat, voluptate fugit nam sint atque molestias beatae
+                        obcaecati quibusdam.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img class="image-top" src="prpro.png" alt="">
+                    <div class="vertical-title">
+                        Video Editor - Premiere Pro (2019-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolor ut iste iusto nobis nostrum,
+                        aspernatur corporis impedit fugiat non quaerat, voluptate fugit nam sint atque molestias beatae
+                        obcaecati quibusdam.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img class="image-top" src="wfilmora.png" alt="">
+                    <div class="vertical-title">
+                        Video Editor - Wondershare Filmora (2018-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolor ut iste iusto nobis nostrum,
+                        aspernatur corporis impedit fugiat non quaerat, voluptate fugit nam sint atque molestias beatae
+                        obcaecati quibusdam.
+                    </div>
+                </div>
+                <div class="vertical-line">
+                    <img class="image-top" src="insta.png" alt="">
+                    <div class="vertical-title">
+                        Instagram Handler (2022-2024)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolor ut iste iusto nobis nostrum,
+                        aspernatur corporis impedit fugiat non quaerat, voluptate fugit nam sint atque molestias beatae
+                        obcaecati quibusdam.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="education" class="educationSection">
+            <h1>Education</h1>
+            <ul>
+                <li>
+                    <h3>Matriculation</h3>
+                    <p><span>Institution:</span> CCU Secondary School</p>
+                    <p><span>Year:</span> 2018 - 2019</p>
+                    <p><span>Details:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+                        odio vitae vestibulum vestibulum.</p>
+                </li>
+                <li>
+                    <h3>Intermediate</h3>
+                    <p><span>Institution:</span> Punjab Group of Colleges Kot Addu Campus</p>
+                    <p><span>Year:</span> 2020 - 2021</p>
+                    <p><span>Details:</span> Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero
+                        malesuada feugiat.</p>
+                </li>
+                <li>
+                    <h3>Bachelor of Science</h3>
+                    <p><span>Institution:</span> UMT Lahore</p>
+                    <p><span>Year:</span> 2021 - 2025</p>
+                    <p><span>Details:</span> Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis
+                        in faucibus orci luctus et.</p>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+        <section id="skills" class="skillsSection">
+            <h1>Skills</h1>
+            <ul>
+                <li>Web Development</li>
+                <li>Video Editing</li>
+                <li>Graphic Design</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="projects" class="projectsSection">
+            <h1>Projects</h1>
+            <ul>
+                <li>
+                    <h3>Project One</h3>
+                    <p><span>Description:</span> A brief description of the project, what technologies were used, and
+                        what was achieved.</p>
+                    <p><span>Technologies:</span> HTML, CSS, JavaScript</p>
+                    <p><span>Link:</span> <a href="https://www.youtube.com/channel/UCAwkJcrb7rteGLgeFGlE3ng"
+                            target="_blank" style="color: rgb(134, 134, 242);">View Project</a></p>
+                </li>
+                <li>
+                    <h3>Project Two</h3>
+                    <p><span>Description:</span> A brief description of the project, what technologies were used, and
+                        what was achieved.</p>
+                    <p><span>Technologies:</span> HTML, CSS, JavaScript</p>
+                    <p><span>Link:</span> <a href="https://www.youtube.com/channel/UCAwkJcrb7rteGLgeFGlE3ng"
+                            target="_blank" style="color: rgb(134, 134, 242);">View Project</a></p>
+                </li>
+                <li>
+                    <h3>Project Three</h3>
+                    <p><span>Description:</span> A brief description of the project, what technologies were used, and
+                        what was achieved.</p>
+                    <p><span>Technologies:</span> HTML, CSS, JavaScript</p>
+                    <p><span>Link:</span> <a href="https://www.youtube.com/channel/UCAwkJcrb7rteGLgeFGlE3ng"
+                            target="_blank" style="color: rgb(134, 134, 242);">View Project</a></p>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+        <section id="contact" class="contactSection">
+            <h1>Contact</h1>
+            <form>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" onclick="alert('Message Submitted!')">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footerBox">
+            <div>
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Email: F2021266559@umt.edu.pk</li>
+                    <li>Phone: 0315-783-8065</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Me</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/faran-malik-4355aa197/">LinkedIn</a></li>
+                    <li><a href="https://github.com/faranmalik">GitHub</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCAwkJcrb7rteGLgeFGlE3ng">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            <p>&copy; 2024 Muhammad Faran. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Gamer', 'Youtuber.'],
+            typeSpeed: 50,
+        });
+        
+    </script>
+</body>
+
+</html>
